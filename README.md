@@ -69,16 +69,27 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes to the main branch.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [X] Submit via Codegrade by committing and pushing any new changes to the main branch.
+- [X] Check Codegrade for automated feedback.
+- [X] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [X] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+ReactJS is a user interface component library that is not a framework, but a library that renders UI. ReactJS is scalable and reusable, and basically everything in ReactJS is a component. ReactJS solves the problems with vanilla JS and the manipulation of DOM elements by taking data and rendering it to the screen through the 'Virtual DOM' which is a virtual representation of what the DOM will be.
+
 1. Describe component state.
+
+Component state is a JavaScript object used by ReactJS to represent an information about the component's current situation, or data that lives on the component. State is managed within the component, similar to how variables are declared within a function. setState() schedules an update to a component's state object, such that when state changes, the component would respond by re-rendering.
+
 1. Describe props.
+
+Props is a JavaScript objected used by ReactJS that represents data passed from parent to child.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+Side effects are anything that affects something outside of the scope of the function being executed. Examples include fetching data from an API, logging, timers, or manually manipulating the DOM. To sync effects in a React component to changes of certain state or props, you can use the Effect hook, which basically lets you perform side effects in function components. The effect hook (useEffect()) takes in two parameters: a callback function where the side effect is run, and a dependency array.
