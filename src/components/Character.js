@@ -10,6 +10,7 @@ const StyledCharacter = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 8rem;
 `
 
 const Character = (props) => {
