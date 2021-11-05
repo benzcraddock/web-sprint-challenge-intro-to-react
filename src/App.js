@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 
+// Custom Components
+import Character from './components/Character';
+
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -14,7 +17,7 @@ const App = () => {
   useEffect(() => {
     axios.get(`https://swapi.dev/api/films`)
       .then(resp => {
-        console.log(resp.data.results);
+        setCharacters(resp.data.results);
       })
       .catch(err => {
         console.error(err);
@@ -24,6 +27,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <Character characters={characters}/>
     </div>
   );
 }
