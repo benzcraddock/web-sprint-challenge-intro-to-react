@@ -15,9 +15,9 @@ const App = () => {
   // sync up with, if any.
 
   useEffect(() => {
-    axios.get(`https://swapi.dev/api/films`)
+    axios.get(`https://swapi.dev/api/people/?page=1`)
       .then(resp => {
-        setCharacters(resp.data.results);
+        setCharacters(resp.data);
       })
       .catch(err => {
         console.error(err);
@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
+      <h1 className="Header">React Wars</h1>
       <Character characters={characters}/>
     </div>
   );

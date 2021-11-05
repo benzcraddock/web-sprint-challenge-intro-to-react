@@ -5,14 +5,20 @@ import styled from 'styled-components';
 // import
 import CharacterPrint from './CharacterPrint';
 
+const StyledCharacter = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
 
 const Character = (props) => {
     return (
-        <div className="container">
+        <StyledCharacter>
             { props.characters.map(character => (
-                <CharacterPrint character={character} key={character.characters} />
+                <CharacterPrint character={character} key={character.name} />
             ))}
-        </div>
+        </StyledCharacter>
     )
 }
 
